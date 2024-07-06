@@ -29,9 +29,3 @@ jobs:
       run: |
         docker-compose -f docker-compose-build.yaml build --parallel
         docker-compose -f docker-compose-build.yaml push
-      with:
-        tags: |
-          caonhat91/udagram-api-feed:latest
-          caonhat91/udagram-api-user:latest
-          caonhat91/udagram-frontend:latest
-          caonhat91/reverseproxy:latest
