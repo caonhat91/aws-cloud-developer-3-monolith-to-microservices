@@ -36,5 +36,9 @@ jobs:
         docker tag udagram-frontend:local ${{ secrets.DOCKER_USERNAME }}/udagram-frontend:latest
 
     - name: Push Docker images
-      run: docker-compose -f docker-compose-build.yaml push
+      run: |
+        docker push ${{ secrets.DOCKER_USERNAME }}/udagram-api-feed:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/udagram-api-user:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/reverseproxy:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/udagram-frontend:latest
 
