@@ -17,6 +17,7 @@ spec:
       containers:
       - name: frontend
         image: caonhat91/udagram-frontend:latest
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: "250m"

@@ -17,6 +17,7 @@ spec:
       containers:
       - name: reverseproxy
         image: caonhat91/reverseproxy:latest
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: "250m"
